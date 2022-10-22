@@ -1,14 +1,14 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #111;
-    color: #ddd;
-    font-family: 'Manrope', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #111;
+  color: #ddd;
+  font-family: "Manrope", sans-serif;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 p,
@@ -18,117 +18,134 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0;
+}
+
+.header .header__logo {
+  width: 80%;
+  max-width: 10rem;
+  max-height: 6rem;
+  color: #111;
+  fill: #111;
 }
 
 .headline {
-    text-align: center;
-    margin: 2rem 1rem;
-    font-size: 1.25rem;
+  text-align: center;
+  margin: 2rem 1rem;
+  font-size: 1.25rem;
 }
 
 .nav-icons {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.5rem;
-    margin: 0 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0 0.75rem;
 }
 
 .nav-icons a.nav-icon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #cccccc60;
-    border: 0.5px solid #f06262;
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.875rem;
-    font-weight: 600;
-    padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ccc;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .nav-icon img {
-    width: 2rem;
-    height: 2rem;
-    max-width: 100%;
-    margin-bottom: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  max-width: 100%;
+  margin-bottom: 0.5rem;
 }
 
 main .drink-section {
-    padding-top: 1.5rem;
-    margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .drink-section .section-title {
-    text-align: center;
-    font-size: 2rem;
-    font-family: 'Dancing script';
-    margin: 0.5rem 0;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Dancing script";
+  margin: 0.5rem 0;
 }
 
 .drink-section .section-subtitle {
-    font-weight: 200;
-    text-align: center;
-    color: #905858;
-    max-width: 35ch;
-    margin: 0 auto;
+  font-weight: 200;
+  text-align: center;
+  color: #905858;
+  max-width: 35ch;
+  margin: 0 auto;
 }
 
 .drink-section .section-list {
-    margin: 1rem;
-    display: flex;
-    flex-direction: column;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .drink-section .section-list .item {
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.025rem;
 }
 
 .footer {
-    text-align: center;
+  text-align: center;
 }
 
 .info {
-    padding: 1.5rem;
-    font-size: 0.875rem;
+  padding: 1.5rem;
+  font-size: 0.875rem;
 }
 
 .info .logo {
-    width: 100%;
-    max-width: 10rem;
-    margin-bottom: 1rem;
+  width: 100%;
+  max-width: 10rem;
+  margin-bottom: 1rem;
 }
 
 .legal {
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
 }
 
 .legal-icon {
-    margin-right: 0.5rem;
-    color: #f06262;
-    border: 2px solid #f06262;
-    border-radius: 100%;
-    padding: 0.25rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-right: 0.5rem;
+  color: #f06262;
+  border: 2px solid #f06262;
+  border-radius: 100%;
+  padding: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .copyright {
-    background-color: black;
-    font-size: 0.9rem;
-    padding: 0.75rem;
+  background-color: black;
+  font-size: 0.9rem;
+  padding: 0.75rem;
 }

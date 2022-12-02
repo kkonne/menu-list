@@ -4,7 +4,8 @@ const drinks_data = [
     slug: "alcohol",
     title: "Alkoholna pića",
     subtitle: "Za dobar početak svakog izlaska",
-    image_path: "https://cdn-icons-png.flaticon.com/512/766/766044.png",
+    icon_path: "https://cdn-icons-png.flaticon.com/512/766/766044.png",
+    image_path: "./../assets/alcohol.webp",
     items_list: [
       {
         id: "0033",
@@ -204,8 +205,9 @@ const drinks_data = [
     slug: "drinks",
     title: "Bezalkoholna pića",
     subtitle: "Osvježite se nakon napornog dana",
-    image_path:
+    icon_path:
       "https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/016/117/original/carbonated-drinks_6284235.png",
+    image_path: "./../assets/soda.webp",
     items_list: [
       { id: "0013", name: "Coca-Cola 0,25l", price: "3,00" },
       { id: "0014", name: "Fanta 0,25l", price: "3,00" },
@@ -256,7 +258,8 @@ const drinks_data = [
     slug: "addons",
     title: "Dodaci",
     subtitle: "Sve ostale sitnice koje bi mogli poželjeti",
-    image_path: "https://cdn-icons-png.flaticon.com/512/66/66451.png",
+    icon_path: "https://cdn-icons-png.flaticon.com/512/66/66451.png",
+    image_path: "./../assets/cake.webp",
     items_list: [
       { id: "0011", name: "Šlag dodatak", price: "0,50" },
       { id: "0064", name: "Sok dodatak", price: "0,50" },
@@ -271,8 +274,9 @@ const drinks_data = [
     slug: "summer",
     title: "Ljetna ponuda",
     subtitle: "Dokazana pomoć u borbi s vrućinom!",
-    image_path:
+    icon_path:
       "https://iconarchive.com/download/i96349/iconsmind/outline/Ice-Cream.ico",
+    image_path: "./../assets/ice-cream.webp",
     items_list: [
       { id: "0087", name: "Sladoled kugla", price: "2,00" },
       { id: "0088", name: "Limunada 0,30l", price: "3,50" },
@@ -293,7 +297,8 @@ const drinks_data = [
     slug: "beer",
     title: "Pivo",
     subtitle: "Svijetlo, tamno, za druženje, za utakmice. Pivo može uvijek",
-    image_path: "https://cdn-icons-png.flaticon.com/512/761/761856.png",
+    icon_path: "https://cdn-icons-png.flaticon.com/512/761/761856.png",
+    image_path: "./../assets/beer.webp",
     items_list: [
       { id: "0078", name: "Heineken 0,33l", price: "3,50" },
       { id: "0079", name: "Ožujsko 0,33l", price: "3,00" },
@@ -319,7 +324,8 @@ const drinks_data = [
     slug: "warm-drinks",
     title: "Topli napitci",
     subtitle: "Kave, čajevi i ostale dobrote iz naše kuhinje",
-    image_path: "https://cdn-icons-png.flaticon.com/512/633/633652.png",
+    icon_path: "https://cdn-icons-png.flaticon.com/512/633/633652.png",
+    image_path: "./../assets/coffee.webp",
     items_list: [
       { id: "0001", name: "Kava s mlijekom mala", price: "2,00" },
       { id: "0002", name: "Kava s mlijekom velika", price: "2,50" },
@@ -341,7 +347,8 @@ const drinks_data = [
     slug: "wine",
     title: "Vino",
     subtitle: "Za osobe s ukusom",
-    image_path: "https://cdn-icons-png.flaticon.com/512/1942/1942436.png",
+    icon_path: "https://cdn-icons-png.flaticon.com/512/1942/1942436.png",
+    image_path: "./../assets/wine.webp",
     items_list: [
       { id: "0066", name: "Blatina 0,10l", price: "1,50" },
       { id: "0067", name: "Blatina 0,20l", price: "2,50" },
@@ -373,16 +380,18 @@ const createNavAnchor = (section) => {
   const anchorLink = document.createElement("a");
   anchorLink.href = `#${section.slug}`;
   anchorLink.className = "nav-icon";
+  anchorLink.style.backgroundImage = `linear-gradient(to top, #191919, transparent), 
+    url('${section.image_path}')`;
 
-  const sectionImage = document.createElement("img");
-  sectionImage.src = section.image_path;
-  sectionImage.className = "img";
+  // const sectionImage = document.createElement("img");
+  // sectionImage.src = section.icon_path;
+  // sectionImage.className = "img";
 
   const sectionTitle = document.createElement("span");
   sectionTitle.textContent = section.title;
   sectionTitle.className = "title";
 
-  anchorLink.appendChild(sectionImage);
+  // anchorLink.appendChild(sectionImage);
   anchorLink.appendChild(sectionTitle);
   return anchorLink;
 };

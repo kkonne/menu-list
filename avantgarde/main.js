@@ -296,7 +296,8 @@ const drinks_data = [
     id: "4",
     slug: "beer",
     title: "Pivo",
-    subtitle: "Svijetlo, tamno, za druženje, za utakmice. Pivo može uvijek",
+    subtitle:
+      "Svijetlo, tamno, za druženje, za utakmice. Za pivo uvijek postoji prigoda!",
     icon_path: "https://cdn-icons-png.flaticon.com/512/761/761856.png",
     image_path: "./../assets/beer.webp",
     items_list: [
@@ -383,15 +384,10 @@ const createNavAnchor = (section) => {
   anchorLink.style.backgroundImage = `linear-gradient(to top, #191919, transparent), 
     url('${section.image_path}')`;
 
-  // const sectionImage = document.createElement("img");
-  // sectionImage.src = section.icon_path;
-  // sectionImage.className = "img";
-
   const sectionTitle = document.createElement("span");
   sectionTitle.textContent = section.title;
   sectionTitle.className = "title";
 
-  // anchorLink.appendChild(sectionImage);
   anchorLink.appendChild(sectionTitle);
   return anchorLink;
 };
@@ -450,4 +446,27 @@ const mapDrinks = (sectionsData) => {
   });
 };
 
-mapDrinks(drinks_data);
+const handleScroll = () => {
+  const scrollTopButton = document.querySelector(".scroll-top");
+
+  scrollTopButton.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+  });
+
+  document.addEventListener("scroll", () => {
+    if (window.scrollY > 1000) {
+      if (scrollTopButton.classList.contains("visible")) return;
+      scrollTopButton.classList.add("visible");
+    } else {
+      if (!scrollTopButton.classList.contains("visible")) return;
+      scrollTopButton.classList.remove("visible");
+    }
+  });
+};
+
+const onInit = () => {
+  mapDrinks(drinks_data);
+  handleScroll();
+};
+
+onInit();

@@ -380,7 +380,7 @@ const drinks_data = [
 const createNavAnchor = (section) => {
   const anchorLink = document.createElement("a");
   anchorLink.href = `#${section.slug}`;
-  anchorLink.className = "nav-icon";
+  anchorLink.classList.add("nav-icon");
   anchorLink.style.backgroundImage = `linear-gradient(to top, #191919, transparent), 
     url('${section.image_path}')`;
 
@@ -448,7 +448,6 @@ const mapDrinks = (sectionsData) => {
 
 const handleScroll = () => {
   const scrollTopButton = document.querySelector(".scroll-top");
-
   scrollTopButton.addEventListener("click", () => {
     window.scrollTo(0, 0);
   });

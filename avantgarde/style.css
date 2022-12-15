@@ -136,6 +136,7 @@ main .drink-section {
   justify-content: center;
   background-color: #e1e1e170;
   backdrop-filter: blur(0.2rem);
+  -webkit-backdrop-filter: blur(0.2rem);
   color: #191919;
   fill: #191919;
   cursor: pointer;
